@@ -1,0 +1,420 @@
+$colorPrimary: #eaf6ff;
+$colorSecondary: #1e7aff;
+$colorThird: #142f80;
+$colorFourth: #1fce62;
+$colorfifth: #ffc22b;
+$colorSixth: #ff5656;
+
+$fontBody: "Open Sans", sans-serif;
+$fontTitle: "Poppins", sans-serif;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontBody;
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fontTitle;
+}
+
+.box-shadow {
+  border-radius: 14px;
+  box-shadow: 13.6635px 47.0564px 163px rgba(0, 0, 0, 0.06),
+    8.04508px 27.7068px 85.0208px rgba(0, 0, 0, 0.043392),
+    4.13185px 14.2299px 39.9024px rgba(0, 0, 0, 0.033696),
+    1.66148px 5.72206px 17.4736px rgba(0, 0, 0, 0.026304),
+    0.371648px 1.27994px 7.5632px rgba(0, 0, 0, 0.016608);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.large {
+  font-size: 42px;
+  @media (max-width: 1500px) {
+    font-size: 32px;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 50px;
+}
+
+.section-heading {
+  margin-bottom: 50px;
+  .section-title {
+    position: relative;
+    padding-bottom: 10px;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+      width: 61px;
+      height: 8px;
+      background: $colorThird;
+    }
+    span {
+      font-size: 84px;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      color: $colorThird;
+      font-weight: bold;
+      @media (max-width: 992px) {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+section {
+  width: 100%;
+  padding-left: 300px;
+  padding-right: 78px;
+  display: flex;
+  align-items: center;
+}
+
+// scroll radian and menu bar
+.navbar {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  overflow: hidden;
+  z-index: 1000;
+  width: 500px;
+  height: 500px;
+  background: #fff;
+  border-radius: 50%;
+  border: 5px solid #eaf6ff;
+  transform: translateX(-50%);
+  .svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-72deg);
+  }
+  svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+    transform: rotate(0);
+    circle {
+      width: 100%;
+      height: 100%;
+      stroke: $colorThird;
+      stroke-dasharray: 1303;
+      stroke-dashoffset: -1464;
+      stroke-width: 8px;
+    }
+  }
+}
+
+.scroll-container {
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+}
+
+#main-menu {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding-right: 55px;
+  z-index: 9;
+  position: relative;
+  .menu-item {
+    font-size: 19px;
+    color: rgba(61, 64, 91, 0.55);
+    text-decoration: none;
+    line-height: 2;
+    display: block;
+    font-weight: 600;
+    &.active {
+      color: $colorThird;
+    }
+  }
+}
+
+.section-1 {
+  justify-content: space-between;
+  height: 100vh;
+
+  .logo {
+    animation: logo 10s ease-in-out infinite;
+  }
+
+  .content {
+    max-width: 390px;
+    margin-left: 78px;
+    p {
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 146%;
+      letter-spacing: 0.05em;
+      color: $colorThird;
+      margin-bottom: 36px;
+      font-family: $fontTitle;
+    }
+  }
+  .install {
+    font-size: 26px;
+    line-height: 146%;
+    letter-spacing: 0.05em;
+    color: $colorThird;
+    font-weight: 800;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    img {
+      margin-left: 20px;
+    }
+  }
+  ul {
+    li {
+      font-size: 26px;
+      line-height: 157.68%;
+      text-align: right;
+      letter-spacing: 0.015em;
+      color: $colorThird;
+      font-weight: 600;
+    }
+  }
+  .right {
+    text-align: right;
+    img {
+      margin-bottom: 36px;
+      border-radius: 16px;
+      // box shadow logo
+      box-shadow: 1.5387566089630127px 1.7255643606185913px 2.691200017929077px
+          0px #29292908,
+        6.879147052764893px 7.714287757873535px 6.217599868774414px 0px
+          #2929290d,
+        17.10735321044922px 19.184215545654297px 14.198399543762207px 0px
+          #29292911,
+        33.30955505371094px 37.3533935546875px 30.25279998779297px 0px #29292916,
+        56.57193374633789px 63.43986511230469px 58px 0px #2929291f;
+    }
+  }
+}
+
+.section-2 {
+  flex-direction: column;
+  align-items: flex-start;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.section-3 {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  p {
+    color: $colorThird;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 146%;
+    letter-spacing: 0.05em;
+    font-family: $fontTitle;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  .info {
+    padding-left: 75px;
+    max-width: 640px;
+    @media (max-width: 767px) {
+      padding-left: 0;
+    }
+    p {
+      margin-bottom: 40px;
+    }
+  }
+  .progress {
+    &__percent {
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 146%;
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+      color: #000000;
+    }
+
+    &__bar {
+      background: #b4d2ff;
+      border: 3px solid #eaf6ff;
+      box-sizing: border-box;
+      border-radius: 10px;
+      display: flex;
+      align-content: center;
+    }
+
+    &__load {
+      animation: 1s ease-out progress-bar infinite;
+      height: 5px;
+      background: #1e7aff;
+      border-radius: 10px;
+    }
+
+    &__second {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 146%;
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+      color: #1fce62;
+      text-align: right;
+    }
+  }
+}
+
+.section-4 {
+  height: 100vh;
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .left {
+    width: calc(100% - 385px);
+    padding-right: 58px;
+    @media (max-width: 767px) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+  .right {
+    width: 385px;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .content {
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  p {
+    margin-bottom: 50px;
+    font-family: $fontTitle;
+    font-weight: 300;
+    font-size: 26px;
+    color: $colorThird;
+    line-height: 146%;
+  }
+  .img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    img + img {
+      margin-top: 30px;
+    }
+  }
+  .reverse {
+    width: 90px;
+    height: 90px;
+  }
+  img {
+    max-height: 95vh;
+  }
+}
+
+// card item
+.product-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+  .product-img {
+    margin-bottom: 17px;
+    img {
+      width: 100%;
+      @media (max-width: 767px) {
+        height: 250px;
+        width: auto;
+      }
+    }
+  }
+  .product-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .product-price {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #737373;
+  }
+}
+
+// tab
+.gallery-tab {
+  ul {
+    list-style: none;
+    border-bottom: 1px solid;
+    margin-bottom: 2em; }
+    ul li {
+      display: inline;
+      margin: 0 4px; }
+  
+  button {
+    width: 90px;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    padding: 8px 0;
+    cursor: pointer; }
+    button:hover {
+      background: rgba(0, 0, 0, 0.9);
+      color: #fdfcfc;
+      font-weight: 500;
+      -webkit-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+    button.active {
+      background: rgba(0, 0, 0, 0.9);
+      color: #fdfcfc;
+      font-weight: 500; }
+  
+  p.content {
+    display: none; }
+    p.content.show {
+      display: initial; }
+}
