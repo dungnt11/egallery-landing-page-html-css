@@ -24,7 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function disableAllGallery() {
     const allGallery = document.querySelectorAll('e-gallery-widget');
-    console.log(allGallery)
     allGallery.forEach((galleryItem) => {
       galleryItem.style.display = "none";
     });
