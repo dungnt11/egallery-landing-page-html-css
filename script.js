@@ -1,9 +1,9 @@
 function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+  const reveals = document.querySelectorAll(".reveal");
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 180;
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
     } else {
@@ -13,22 +13,25 @@ function reveal() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener("scroll", reveal);
+  const scrollContainerDOM = document.querySelector('.scroll-container');
+  if (!scrollContainerDOM) return;
+  scrollContainerDOM.addEventListener("scroll", reveal);
   const galleryTab = [
-    document.querySelector('.gallery-tab button[data-content="#one"]'),
-    document.querySelector('.gallery-tab button[data-content="#two"]'),
-    document.querySelector('.gallery-tab button[data-content="#three"]'),
+    document.querySelector('.custom-bar .tab[data-content="#one"]'),
+    document.querySelector('.custom-bar .tab[data-content="#two"]'),
+    document.querySelector('.custom-bar .tab[data-content="#three"]'),
   ];
 
   function disableAllGallery() {
     const allGallery = document.querySelectorAll('e-gallery-widget');
+    console.log(allGallery)
     allGallery.forEach((galleryItem) => {
       galleryItem.style.display = "none";
     });
   }
 
   function disableAllButton() {
-    const allButtons = document.querySelectorAll('.gallery-tab button');
+    const allButtons = document.querySelectorAll('.custom-bar tab');
     allButtons.forEach((galleryItem) => {
       galleryItem.classList.remove('active');
     });

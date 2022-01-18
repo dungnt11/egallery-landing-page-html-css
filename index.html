@@ -25,6 +25,11 @@
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
         <link rel="stylesheet" href="./libs/reset.css" />
         <link rel="stylesheet" href="./style.css" />
         <link rel="stylesheet" href="./libs/eGallery/style.c44bcf8d.css" />
@@ -54,17 +59,17 @@
             <div class="copyright">Creator By Etify</div>
           </nav>
           <div id="fullpage">
-            <section class="section-1 reveal" id="intro">
+            <section class="section-1" id="intro">
               <div class="left">
-                <div class="section-heading">
+                <div class="section-heading active">
                   <h2 class="section-title">
                     <span>Intro.</span>
                   </h2>
                 </div>
-                <div class="content">
+                <div class="content active">
                   <p>Boost your conversion rate with fastest gallery app!</p>
-                  <a href="" class="install">
-                    INSTALL APP
+                  <a href="" class="install active">
+                    <span>INSTALL APP</span>
                     <img
                       class="shopify"
                       src="./images/shopify.svg"
@@ -74,64 +79,61 @@
                 </div>
               </div>
               <div class="right">
-                <img class="logo" src="./images/intro1.svg" alt="banner" />
+                <img class="logo active" src="./images/intro1.svg" alt="banner" />
                 <ul>
-                  <li>Easy to Use</li>
-                  <li>Increase Conversions</li>
-                  <li>Automatically Generate</li>
+                  <li class="active">Easy to Use</li>
+                  <li class="active">Increase Conversions</li>
+                  <li class="active">Automatically Generate</li>
                 </ul>
               </div>
             </section>
             <section class="section section-2" id="size">
-              <div class="section-heading">
+              <div class="section-heading reveal">
                 <h2 class="section-title">
                   <span>Layout</span>
                 </h2>
               </div>
               <div class="content">
-                <div class="gallery-tab">
-                  <!-- Tabs nav -->
-                  <ul>
-                    <li>
-                      <button class="tab active" data-content="#one">
-                        Gallery 01
-                      </button>
-                    </li>
-                    <li>
-                      <button class="tab" data-content="#two">Gallery 02</button>
-                    </li>
-                    <li>
-                      <button class="tab" data-content="#three">
-                        Gallery 03
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <e-gallery-widget data-ind="1" data-id="thv8CdTY-"></e-gallery-widget>
-                <e-gallery-widget data-ind="2" data-id="k5gJbojvq"></e-gallery-widget>
-                <e-gallery-widget data-ind="3" data-id="BbErncIYc"></e-gallery-widget>
+                <nav class="custom-bar reveal">
+                  <a href="#" class="tab active" data-content="#one">
+                    <i class="fas fa-heart"></i>
+                    <b>Gallery 01</b>
+                  </a>
+                  <a href="#" class="tab" data-content="#two">
+                    <i class="fas fa-egg"></i>
+                    <b>Gallery 02</b>
+                  </a>
+                  <a href="#" class="tab" data-content="#three">
+                    <i class="fas fa-cannabis"></i>
+                    <b>Gallery 03</b>
+                  </a>
+                  <span></span>
+                </nav>
+
+                <e-gallery-widget class="reveal" data-ind="1" data-id="thv8CdTY-"></e-gallery-widget>
+                <e-gallery-widget class="reveal" data-ind="2" data-id="k5gJbojvq"></e-gallery-widget>
+                <e-gallery-widget class="reveal" data-ind="3" data-id="BbErncIYc"></e-gallery-widget>
               </div>
             </section>
             <section class="section section-3" id="size">
-              <div class="section-heading">
+              <div class="section-heading reveal">
                 <h2 class="section-title">
                   <span>It's lightning fast</span>
                 </h2>
               </div>
               <div class="content">
-                <img src="./images/size.svg" alt="size" />
+                <img class="reveal" src="./images/size.svg" alt="size" />
                 <div class="info">
-                  <p>
+                  <p class="reveal">
                     File bundle is very light. It's less than 100kb with
                     javascript and css code. it's only about the size of a
                     low-resolution photo.
                   </p>
                   <div class="progress">
-                    <div class="progress__percent">15%</div>
-                    <div class="progress__bar">
-                      <div class="progress__load"></div>
+                    <div class="progress__bar reveal">
+                      <div class="progress__load reveal"></div>
                     </div>
-                    <div class="progress__second">~ 200ms</div>
+                    <div class="progress__second reveal">~ 200ms</div>
                   </div>
                 </div>
               </div>
@@ -139,24 +141,24 @@
             <section class="section section-4" id="responsive">
               <div class="wrap">
                 <div class="left">
-                  <div class="section-heading">
+                  <div class="section-heading reveal">
                     <h2 class="section-title">
                       <span>Responsive</span>
                     </h2>
                   </div>
                   <div class="content">
-                    <p class="large">
+                    <p class="large reveal">
                       Compatible with different types of screens, helps to
                       promote your products and not miss potential customers.
                     </p>
                     <div class="img">
                       <img
-                        class="box-shadow"
+                        class="box-shadow web reveal"
                         src="./images/responsive1.svg"
                         alt="responsive"
                       />
                       <img
-                        class="reverse"
+                        class="reverse reveal"
                         src="./images/responsive3.svg"
                         alt="responsive"
                       />
@@ -165,7 +167,7 @@
                 </div>
                 <div class="right">
                   <img
-                    class="box-shadow"
+                    class="box-shadow mobile reveal"
                     src="./images/responsive2.svg"
                     alt="responsive"
                   />
